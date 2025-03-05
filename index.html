@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nunya Création Défilé</title>
+    <meta name="description" content="Nunya Création présente son défilé de mode exclusif pour l'ouverture de sa boutique. Réservez votre place !n">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header id="header">
+        <img id="logo" src="images/nc.png" alt="logo Nunya Creation" title="Nunya Creation">
+        <div class="bloc defaultBloc marron">
+            <h1 id="titre">Lancement officiel de Nunya Creation : Une soirée mode inoubliable</h1>
+        </div>
+        <div class="bloc defaultBloc">
+            <div id="textIntro">
+                <p>Vous êtes une amoureuse de la mode artisanale et éthique, et recherchez des petites pépites originales et créatives tout en élégance?</p>
+                <p>
+                    Plongez dans l'univers unique de Nunya Creation, une marque qui célèbre l'élégance, la modernité et l'authenticité. Nous vous réservons
+                    un défilé de mode exclusif le <b>Vendredi 27 juin 2025</b>, mettant en lumière des tenues élégantes, asymétriques et colorées, inspirées de traditions riches
+                    et du savoir faire unique de nos couturières incroyables.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <section id="tenues">
+        <img id="img1" src="images/img1.jpg" alt="Exemple de tenue élégante Nunya Création 1" title="Tenue 1">
+        <img id="img2" src="images/img2.jpg" alt="Exemple de tenue élégante Nunya Création 2" title="Tenue 2">
+        <img id="img3" src="images/img3.jpg" alt="Exemple de tenue élégante Nunya Création 3" title="Tenue 3">
+
+        <p class="textResa">
+            Réservez votre place dès maintenant ! Les places sont limitées, alors ne manquez pas cette opportunité unique de
+            vivre une expérience mode inoubliable.
+        </p>
+        <form id="form">
+            <span id="validationForm"></span>
+            <!-- Nom et Prénom  -->
+            <div class="inline-fields">
+                <div class="field-group">
+                    <!-- Nom -->
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                </div>
+                   
+                <div class="field-group">
+                    <!-- Prénom -->
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+                </div>
+            </div>
+            <!-- Email -->
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+   
+            <button type="submit" id="inscription">Inscrivez vous maintenant</button>
+        </form>
+    </section>
+
+    <section id="informationsGenerales" class="info">
+        <div class="cote defaultBloc beige">   
+            <h2 class="center">Soyez parmi les premiers à vivre l'expérience Nunya Creation</h2>
+            <div>
+                <p><b>Date : Vendredi 27 Juin 2025</b></p>
+                <p><b>Heure : 19h00</b></p>
+                <p><b>Lieu : 54 rue Baudoin Richelieu, 75009, Paris</b></p>
+                <p>
+                    Rejoignez-nous pour célébrer l'ouverture de notre boutique physique avec un défilé mettant en avant nos plus
+                    belles créations. Une <b>vente exclusive</b> aura lieu juste après le défilé pour les participants.
+                    L'<b>ouverture officielle de la boutique</b> aura lieu le <b>Samedi 28 Juin 2025</b> à partir de 9h30.
+                </p>
+            </div>
+        </div>
+        <div class="cote defaultBloc beigeFonce">
+            <h2 class="center"> Pourquoi venir à notre défilé ?</h2>
+            <p>
+                <span>Découvrez une <b>collection unique</b> qui allie tradition et modernité.</span>
+                <span>Rencontrez Sophie Salnot, la créatrice, et plongez dans son univers.</span>
+                <span>Participez à une <b>soirée élégante et conviviale</b>.</span>
+                <span>Profitez d'une ambiance festive avec <b>cocktail de bienvenue</b>, musique, et surprises.</span>
+                <span>Profitez d'une <b>offre spéciale</b> lors de la vente exclusive!</span>
+            </p>   
+        </div>
+    </section>
+
+    <section class="blocCadeau">
+            <img id="photoshoot" src="images/photoshootNature.jpg" alt="photoshoot nature" title="Photoshoot Nature">
+            <div id="cadeau">
+                <h2 class="center">Un cadeau pour nos invités</h2>
+                <p class="parag">En participant à notre défilé, profitez d'une réduction exceptionnelle de 15% sur tous vos achats lors de l'événement.
+                    Une raison de plus de ne pas manquer cette soirée unique !</p>
+                <a href="#nom"><button id="buttonRappel">Réservez votre place dès maintenant</button></a>
+            </div>
+    </section>
+ 
+    <section id="details" class="info">
+        <section class="cote defaultBloc beigeFonce">   
+            <h2 class="center">Qui sommes-nous ?</h2> 
+            <p>
+                Nunya Creation est une marque qui incarne l'élégance, l'authenticité et l'artisanat.
+                Fondée par Sophie Salnot, une guadeloupéenne qui a passé 27 ans au Togo, 
+                la marque fusionne son héritage culturel avec une vision moderne et cosmopolite.
+                Chaque pièce est une œuvre d'art : stylisée, asymétrique et pleine de couleurs, alliant élégance et audace contemporaine.
+            </p>
+        </section>
+        <section class="cote defaultBloc beige">
+            <h2 class="center">L'artisanat au cœur de nos créations</h2> 
+            <p>
+                Nos créations sont faites avec soin, à la main, et dans le respect de l'environnement.
+                Nunya Creation propose des vêtements uniques qui racontent une
+                histoire, entre tradition et modernité, pour une clientèle exigeante à la recherche de pièces distinctives. 
+                Nos vêtements ne sont pas seulement un moyen de se vêtir, mais une manière de se démarquer tout en mettant en avant des valeurs fortes et responsables.
+            </p>
+        </section>
+    </section>
+
+    <section class="blocVisite">
+        <img id="coutureImg" src="images/couture.jpg" alt="couture" title="couture">
+        <div class="texte-overlay">
+            <h2 class="center">Préparez votre visite</h2>
+            <p class="lastBloc">
+                Un événement à ne pas manquer ! Le lieu sera décoré pour l'occasion, et nous vous accueillerons avec le sourire. Parking et rafraîchissements
+                disponibles sur place.
+                <ul>
+                    <li><b>Dress code :</b> Venez habillés chics et élégants pour profiter pleinement de l’ambiance du défilé.</li>
+                    <li><b>Programme détaillé :</b> 18h30 - Accueil des invités avec un cocktail de bienvenue / 19h00 - Défilé de mode exclusif / 20h00 : Vente
+                        privée et rencontre avec la créatrice.</li>
+                    
+                    <li><b>Services complémentaires :</b> Goodie bag offert à chaque invité présent au défilé.</li>
+                    <li><b>Réservation & Confirmation :</b> N’oubliez pas de confirmer votre présence via notre formulaire d'inscription.</li>
+                    <li><b>Petite touche personnelle :</b> Un espace de discussion sera aménagé pour échanger avec La fondatrice de la marque et découvrir son
+                        univers de plus près.</li>
+                </ul>
+            </p>
+        </div>
+    </section>
+</body>
+</html>
