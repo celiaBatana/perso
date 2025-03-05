@@ -1,0 +1,524 @@
+body {
+    line-height: 1.6;
+    background-color: #fafaf3; /* Couleur de fond douce */
+    color: #333; /* Couleur de texte générale */
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+#logo {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    width: auto;
+    height: 8em; 
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+#titre {
+    text-align: center;
+    margin: auto;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#textIntro {
+    max-width: 1000px;
+    margin: 0 10px;
+    position: relative;
+}
+
+/* Bloc par défaut */
+.defaultBloc {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour le style */
+    position: relative;
+}
+
+.bloc {
+    background-color: #F1D1B8;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Images */
+#tenues {
+    display: flex;
+    justify-content: center; /* Aligne les images horizontalement au centre */
+    gap: 20px; /*Espace entre les images */
+    width: auto;
+    height: auto;
+    position: relative; /* Nécessaire pour positionner le formulaire par-dessus */
+}
+
+#tenues img {
+    height: 600px;
+}
+
+#tenues img {
+    width: 60%;
+    height: auto;
+    object-fit: cover; /* Gère les proportions */
+}
+
+/* Texte sur les images pour la reservation. */
+.textResa {
+    text-align: left;
+    font-size: 0.9em;
+    position: absolute; /* Place le formulaire au-dessus des images */
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Corrige l'alignement */
+    width: 300px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond avec transparence */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* Formulaire d'inscription */
+form {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Assure que le formulaire soit au-dessus des images */
+}
+
+/* Champs du formulaire */
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select, textarea, button {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: auto;
+}
+
+/* Conteneur pour Nom et Prénom */
+.inline-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Espace entre les champs */
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+/* Champs individuels (Nom et Prénom) */
+.field-group {
+    flex: 1; /* Les champs occupent une largeur égale */
+}
+
+/* Champ et label restent alignés */
+.field-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.field-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Les boutons */
+button {
+    background-color: #B67331;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #C48C56;
+    transform: scale(1.05);
+}
+
+button:focus, input:focus, a:focus {
+    outline: 2px solid #B67331;
+}
+
+#buttonRappel {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+
+/* Bloc cadeau */
+.blocCadeau {
+    display: flex;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer les blocs à la ligne si nécessaire */
+    justify-content: center; /* Centre les éléments horizontalement sur petit écran */
+    align-items: flex-start; /* Alignement vertical en haut */
+    height: auto; /* Laisse la hauteur s'ajuster automatiquement */
+
+}
+
+#photoshoot {
+    display: flex;
+    margin-top: 15px;
+}
+
+#cadeau {
+    position: absolute;
+    width: 25%;
+    margin-top: 300px;
+    left: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.parag {
+    margin: 0 10px;
+}
+
+.liste {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.blocVisite {
+    max-width: 1890px;
+    margin: 0 auto;
+    position: relative;
+    p {
+        text-align: left;
+        font-size: 1.1em;
+    }
+}
+
+/* Les couleurs. */
+.beige {
+    background-color: #F2E1D3;
+}
+
+.beigeFonce {
+    background-color: #F1D1B8;
+}
+
+.marron {
+    background-color: #B67331;
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info {
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre les blocs horizontalement */
+    gap: 20px;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran si nécessaire */
+    margin-top: 15px;
+  }
+  
+.cote {
+    flex: 1;  /* Chaque bloc occupe une part égale */
+    max-width: 1000px; /* Optionnel : largeur minimale pour chaque bloc */
+    box-sizing: border-box; /* Pour inclure les paddings et bordures dans la largeur */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+  
+/* Bloc de texte positionné par-dessus l'image */
+.texte-overlay {
+    position: absolute;
+    top: 50%;     
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(252, 236, 220, 0.8);
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+}
+
+#coutureImg {
+    margin-top: 15px;
+    max-width: 1890px;
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+/* style des balises */
+h1 {
+    color: rgb(253, 249, 249);
+    font-size: 2.7em;
+    font-family: 'Nunito', sans-serif;
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+}
+
+h3, p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p span {
+    display: flex;
+    align-items: center;
+    display: inline-block; /* Permet de définir une largeur et d'aligner le texte à gauche */
+    text-align: left; /* Aligne le contenu (coche et texte) à gauche dans le span */
+    width: 80%;
+    margin: 5px 0; 
+  }
+  
+p span::before {
+    content: '✔';
+    color: green;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* --------------------------- media queries------------------------------- */
+/* Media query max width 1440px. */
+@media (max-width: 1440px) {
+    .textResa {
+        top: 10%;
+    }
+    form {
+        top: 45%;
+    }
+    #cadeau {
+    left: 300px;
+    margin-top: 200px;
+    }
+    #photoshoot {
+        width: 95%;
+    }
+    .texte-overlay {
+        padding: 10px;
+    }
+} 
+/* Media query max width 1024px. */
+@media (max-width: 1024px) {
+    #cadeau {
+      left: 80px;
+      margin-top: 100px;
+      width: 400px;
+    }
+    #buttonRappel {
+        width: 50%;
+    }
+    #photoshoot {
+        width: 90%;
+    }
+    .texte-overlay {
+        padding: 1px;
+    }
+} 
+/* Media query max width 810px. */
+@media (max-width: 810px) {
+    .bloc {
+        padding: 2px;
+    }
+    #cadeau {
+        left: 100px;
+        margin-top: 50px;
+    }
+    #tenues {
+        height: auto;
+    }
+    #tenues img {
+        height: 600px;
+    }
+    #coutureImg {
+        height: 500px;
+    }
+    .texte-overlay {
+        padding: 0 10px;
+        width: 700px;
+        font-size: 0.8em;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    form {
+        top: 50%;
+    }
+    button {
+        margin-top: 10px;
+    }
+} 
+/* Media query max width 600px. */
+@media (max-width: 600px) {
+    #cadeau {
+        left: 30px;
+        width: 200px;
+        font-size: 0.6em;
+        margin-top: 10px;
+    }
+} 
+/* Media query max width 430px. */
+@media (max-width: 430px) {
+    #cadeau {
+        margin-top: 20px;
+    }
+    .field-group label {
+        margin-bottom: 2px;
+    }
+    .field-group input {
+        width: 100%;
+        padding: 2px;
+    }
+    #buttonRappel {
+        width: 80%;
+    }
+    .bloc {
+        font-size: 0.6em;
+    }
+    .cote {
+        font-size: 0.7em;
+    }
+    .textResa {
+        top: 12%;
+        font-size: 0.7em;
+        width: 200px;
+    }
+    .texte-overlay {
+        padding: 1px;
+        font-size: 0.7em;
+        width: 360px;
+        max-height: 400px;
+    }
+    .lastBloc {
+        margin-left: 10px;
+    }
+    #coutureImg {
+        height: 400px;
+    }
+    .center {
+        margin-bottom: 0;
+    }
+    #tenues {
+        height: auto;
+    }
+    #tenues img {
+        height: 400px;
+    }
+    form {
+        top: 65%;
+        font-size: 0.7em;
+        width: 200px;
+        padding: 15px;
+    }
+    input, select, textarea {
+        width: 90%;
+        padding-top: 2px;
+        margin-bottom: 5px;
+        margin-top: 2px;
+    }
+    button {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+    li {
+        margin-bottom: 2px;
+    }
+}
+/* Media query max width 375px. */
+@media (max-width: 375px) {
+    #titre {
+       padding: 0;
+        font-size: 1.5em;
+    }
+    .bloc {
+        padding: 2px;
+        font-size: 0.7em;
+    }
+    #cadeau {
+        left: 30px;
+        margin-top: 20px;
+        width: 150px;
+        font-size: 0.50em;
+    }
+    .field-group label {
+        margin-bottom: 2px;
+    }
+    .field-group input {
+        width: 100%;
+        padding: 5px;
+    }
+    .cote{
+        font-size: 0.6em;
+    }
+    #tenues {
+        height: auto;
+    }
+    #tenues img {
+        height: 400px;
+    }
+    #buttonRappel {
+        font-size: 0.65em;
+        width: 80%;
+    }
+    form {
+        top: 62%;
+        padding-top: 5px;
+    }
+    input, select, textarea, button {
+        width: 90%;
+        margin-bottom: 2px;
+        margin: auto;
+    }
+    button {
+        margin: 10px 0;
+        font-size: 1em;
+    }
+    li {
+        margin-bottom: 2px;
+    }
+} 
