@@ -9,6 +9,10 @@ body {
     font-size: 0.9em;
 }
 
+#header {
+    width: 100%;
+}
+
 #logo {
     text-align: center;
     margin: auto;
@@ -53,26 +57,27 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Images */
 #tenues {
+    /*width: auto;
+    height: auto;*/
+    position: relative;  /*Nécessaire pour positionner le formulaire par-dessus */
+
     display: flex;
-    justify-content: center; /* Aligne les images horizontalement au centre */
-    gap: 20px; /*Espace entre les images */
-    width: auto;
-    height: auto;
-    position: relative; /* Nécessaire pour positionner le formulaire par-dessus */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap; /* Ne pas passer à la ligne */
+    overflow: hidden;
 }
 
 #tenues img {
-    height: 600px;
-}
-
-#tenues img {
-    width: 60%;
+    width: 33%; /* 3 images à 30% chacune avec marge */
     height: auto;
-    object-fit: cover; /* Gère les proportions */
+    object-fit: cover;
 }
 
 /* Texte sur les images pour la reservation. */
@@ -95,7 +100,7 @@ body {
 /* Formulaire d'inscription */
 form {
     position: absolute;
-    top: 40%;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
@@ -256,7 +261,7 @@ button:focus, input:focus, a:focus {
   
 .cote {
     flex: 1;  /* Chaque bloc occupe une part égale */
-    max-width: 1000px; /* Optionnel : largeur minimale pour chaque bloc */
+    /*max-width: 1000px;  Optionnel : largeur minimale pour chaque bloc */
     box-sizing: border-box; /* Pour inclure les paddings et bordures dans la largeur */
     padding-left: 30px;
     padding-right: 30px;
@@ -323,14 +328,14 @@ p span::before {
     margin-right: 8px;
 }
 
-/* --------------------------- media queries------------------------------- */
+/* ----------- media queries ------------ */
 /* Media query max width 1440px. */
 @media (max-width: 1440px) {
     .textResa {
         top: 10%;
     }
     form {
-        top: 45%;
+        top: 46%;
     }
     #cadeau {
     left: 300px;
@@ -345,6 +350,9 @@ p span::before {
 } 
 /* Media query max width 1024px. */
 @media (max-width: 1024px) {
+    form {
+        top: 56%;
+    }
     #cadeau {
       left: 80px;
       margin-top: 100px;
@@ -358,10 +366,14 @@ p span::before {
     }
     .texte-overlay {
         padding: 1px;
+        width:700px;
     }
 } 
 /* Media query max width 810px. */
-@media (max-width: 810px) {
+@media (max-width: 854px) {
+    form {
+        top: 65%;
+    }
     .bloc {
         padding: 2px;
     }
@@ -386,9 +398,6 @@ p span::before {
     h1 {
         font-size: 1.5em;
     }
-    form {
-        top: 50%;
-    }
     button {
         margin-top: 10px;
     }
@@ -412,7 +421,7 @@ p span::before {
     }
     .field-group input {
         width: 100%;
-        padding: 2px;
+        padding: 6px;
     }
     #buttonRappel {
         width: 80%;
@@ -450,7 +459,7 @@ p span::before {
         height: 400px;
     }
     form {
-        top: 65%;
+        top: 62%;
         font-size: 0.7em;
         width: 200px;
         padding: 15px;
@@ -521,4 +530,4 @@ p span::before {
     li {
         margin-bottom: 2px;
     }
-} 
+}
