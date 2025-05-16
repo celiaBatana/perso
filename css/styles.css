@@ -1,12 +1,14 @@
 body {
     line-height: 1.6;
-    background-color: #fafaf3; /* Couleur de fond douce */
-    color: #333; /* Couleur de texte générale */
+    background-color: #fafaf3;
+    color: #333;
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 0.9em;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 #header {
@@ -43,7 +45,8 @@ body {
 
 /* Bloc par défaut */
 .defaultBloc {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour le style */
+    /* Ombre pour le style */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
@@ -63,19 +66,16 @@ body {
 
 /* Images */
 #tenues {
-    /*width: auto;
-    height: auto;*/
-    position: relative;  /*Nécessaire pour positionner le formulaire par-dessus */
-
+    position: relative;  
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: nowrap; /* Ne pas passer à la ligne */
+    flex-wrap: nowrap;
     overflow: hidden;
 }
 
 #tenues img {
-    width: 33%; /* 3 images à 30% chacune avec marge */
+    width: 33%;
     height: auto;
     object-fit: cover;
 }
@@ -84,13 +84,15 @@ body {
 .textResa {
     text-align: left;
     font-size: 0.9em;
-    position: absolute; /* Place le formulaire au-dessus des images */
+    /* Place le formulaire au-dessus des images */
+    position: absolute;
     top: 15%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Corrige l'alignement */
+    /* Corrige l'alignement */
+    transform: translate(-50%, -50%);
     width: 300px;
     padding: 15px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fond avec transparence */
+    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -109,7 +111,7 @@ form {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 2; /* Assure que le formulaire soit au-dessus des images */
+    z-index: 2;
 }
 
 /* Champs du formulaire */
@@ -141,7 +143,9 @@ input, select, textarea, button {
 
 /* Champs individuels (Nom et Prénom) */
 .field-group {
-    flex: 1; /* Les champs occupent une largeur égale */
+    /* Les champs occupent une
+    largeur égale */
+    flex: 1;
 }
 
 /* Champ et label restent alignés */
@@ -189,11 +193,13 @@ button:focus, input:focus, a:focus {
 .blocCadeau {
     display: flex;
     gap: 20px;
-    display: flex;
-    flex-wrap: wrap; /* Permet de passer les blocs à la ligne si nécessaire */
-    justify-content: center; /* Centre les éléments horizontalement sur petit écran */
-    align-items: flex-start; /* Alignement vertical en haut */
-    height: auto; /* Laisse la hauteur s'ajuster automatiquement */
+    /* Permet de passer les blocs à la ligne
+    si nécessaire */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Alignement vertical en haut */
+    align-items: flex-start;
+    height: auto;
 
 }
 
@@ -206,7 +212,7 @@ button:focus, input:focus, a:focus {
     position: absolute;
     width: 25%;
     margin-top: 300px;
-    left: 400px;
+    left: 30%; transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -252,17 +258,18 @@ button:focus, input:focus, a:focus {
 }
 
 .info {
-    display: flex; /* Active Flexbox */
-    justify-content: center; /* Centre les blocs horizontalement */
+    /* Active Flexbox */
+    display: flex;
+    justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran si nécessaire */
+    flex-wrap: wrap;
     margin-top: 15px;
   }
   
 .cote {
-    flex: 1;  /* Chaque bloc occupe une part égale */
-    /*max-width: 1000px;  Optionnel : largeur minimale pour chaque bloc */
-    box-sizing: border-box; /* Pour inclure les paddings et bordures dans la largeur */
+    flex: 1;
+    max-width: 1000px;
+    box-sizing: border-box;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -315,8 +322,8 @@ a {
 p span {
     display: flex;
     align-items: center;
-    display: inline-block; /* Permet de définir une largeur et d'aligner le texte à gauche */
-    text-align: left; /* Aligne le contenu (coche et texte) à gauche dans le span */
+    display: inline-block;
+    text-align: left;
     width: 80%;
     margin: 5px 0; 
   }
@@ -332,13 +339,13 @@ p span::before {
 /* Media query max width 1440px. */
 @media (max-width: 1440px) {
     .textResa {
-        top: 10%;
+        top: 12%;
     }
     form {
-        top: 46%;
+        top: 55%;
     }
     #cadeau {
-    left: 300px;
+    /*left: 300px;*/
     margin-top: 200px;
     }
     #photoshoot {
@@ -346,15 +353,15 @@ p span::before {
     }
     .texte-overlay {
         padding: 10px;
+        width: 800px;
     }
 } 
 /* Media query max width 1024px. */
 @media (max-width: 1024px) {
     form {
-        top: 56%;
+        top: 65%;
     }
     #cadeau {
-      left: 80px;
       margin-top: 100px;
       width: 400px;
     }
@@ -366,19 +373,26 @@ p span::before {
     }
     .texte-overlay {
         padding: 1px;
-        width:700px;
+        font-size: 0.8em;
+    }
+
+    .blocVisite {
+        p {
+            padding-left: 10px;
+        }
+        
     }
 } 
 /* Media query max width 810px. */
 @media (max-width: 854px) {
     form {
-        top: 65%;
+        top: 50%;
     }
     .bloc {
         padding: 2px;
     }
     #cadeau {
-        left: 100px;
+        left: 40%; transform: translateX(-50%);
         margin-top: 50px;
     }
     #tenues {
@@ -392,8 +406,8 @@ p span::before {
     }
     .texte-overlay {
         padding: 0 10px;
-        width: 700px;
         font-size: 0.8em;
+        width: 400px;
     }
     h1 {
         font-size: 1.5em;
@@ -404,18 +418,17 @@ p span::before {
 } 
 /* Media query max width 600px. */
 @media (max-width: 600px) {
+    body {
+        width: 100%;
+    }
     #cadeau {
-        left: 30px;
         width: 200px;
         font-size: 0.6em;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 } 
 /* Media query max width 430px. */
 @media (max-width: 430px) {
-    #cadeau {
-        margin-top: 20px;
-    }
     .field-group label {
         margin-bottom: 2px;
     }
@@ -440,7 +453,7 @@ p span::before {
     .texte-overlay {
         padding: 1px;
         font-size: 0.7em;
-        width: 360px;
+        width: 100%;
         max-height: 400px;
     }
     .lastBloc {
@@ -480,7 +493,7 @@ p span::before {
 }
 /* Media query max width 375px. */
 @media (max-width: 375px) {
-    #titre {
+   #titre {
        padding: 0;
         font-size: 1.5em;
     }
@@ -489,7 +502,6 @@ p span::before {
         font-size: 0.7em;
     }
     #cadeau {
-        left: 30px;
         margin-top: 20px;
         width: 150px;
         font-size: 0.50em;
