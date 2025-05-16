@@ -99,6 +99,12 @@ body {
     z-index: 2;
 }
 
+/*Message d'erreur/validation dans
+formulaire de réservation. */
+#validationForm {
+    font-size: 0.8em;
+}
+
 /* Formulaire d'inscription */
 form {
     position: absolute;
@@ -342,11 +348,12 @@ p span::before {
         top: 12%;
     }
     form {
-        top: 55%;
+        top: 52%;
     }
     #cadeau {
-    /*left: 300px;*/
+    left: 40%; transform: translateX(-50%);
     margin-top: 200px;
+    width: 400px;
     }
     #photoshoot {
         width: 95%;
@@ -383,7 +390,7 @@ p span::before {
         
     }
 } 
-/* Media query max width 810px. */
+/* Media query max width 854px. */
 @media (max-width: 854px) {
     form {
         top: 50%;
@@ -392,8 +399,8 @@ p span::before {
         padding: 2px;
     }
     #cadeau {
-        left: 40%; transform: translateX(-50%);
         margin-top: 50px;
+        width: 400px;
     }
     #tenues {
         height: auto;
@@ -422,9 +429,15 @@ p span::before {
         width: 100%;
     }
     #cadeau {
-        width: 200px;
-        font-size: 0.6em;
+        font-size: 0.9em;
         margin-top: 20px;
+        width: 300px;
+    }
+    #buttonRappel {
+        width: 80%;
+    }
+    .cote {
+        flex:unset;
     }
 } 
 /* Media query max width 430px. */
@@ -436,14 +449,19 @@ p span::before {
         width: 100%;
         padding: 6px;
     }
+    #cadeau {
+        width: 300px;
+        margin-left: 20px;
+        font-size: 0.8em;
+    }
     #buttonRappel {
         width: 80%;
     }
     .bloc {
-        font-size: 0.6em;
+        font-size: 0.9em;
     }
     .cote {
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
     .textResa {
         top: 12%;
@@ -499,12 +517,13 @@ p span::before {
     }
     .bloc {
         padding: 2px;
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
     #cadeau {
         margin-top: 20px;
-        width: 150px;
-        font-size: 0.50em;
+        margin-left: 10px;
+        width: 210px;
+        font-size: 0.6em;
     }
     .field-group label {
         margin-bottom: 2px;
@@ -514,7 +533,7 @@ p span::before {
         padding: 5px;
     }
     .cote{
-        font-size: 0.6em;
+        font-size: 0.9em;
     }
     #tenues {
         height: auto;
@@ -523,7 +542,7 @@ p span::before {
         height: 400px;
     }
     #buttonRappel {
-        font-size: 0.65em;
+        font-size: 0.8em;
         width: 80%;
     }
     form {
